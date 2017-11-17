@@ -1,1 +1,65 @@
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a> <img src="../assets/images/logo.png" height="80" width="100%" style="margin-top:10px"></a>
+      
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" (click)="displayTool()"><h3>Create Pipeline</h3></a></li>
+            </ul>
+  </div>
+</nav>
+
+<div class="row" *ngIf="createpipe">
+    <div class="col-md-4 col-md-border">
+    <form class="container-fluid" #formRef="ngForm" (ngSubmit)="createpipeview()">
+  <div class="form-group">
+    <input type="text" class="form-control" id="start" [(ngModel)]="start" value="start" name="start" #name="ngModel" placeholder="Start" readonly="readonly">
+  </div>
+  <div class="row">
+    <div *ngFor="let dp of dynamicpipe; let in=index" class="col-md-11 form-group">
+         <input type="text" [(ngModel)]="dynamicpipe[in].value" name="name{{in}}" class="form-control" #name="ngModel" required />
+     </div>
+     <div  *ngIf="!dynamicon" class="col-md-1 form-group" style="margin-left: inherit;padding-top: 7px;">
+         <span class="glyphicon glyphicon-plus" (click)="addtext()"></span>
+         
+     </div>
+     <div  *ngIf="dynamiconm" class="col-md-1 form-group" style="margin-left: inherit;padding-top: 7px;">
+         <span class="glyphicon glyphicon-minus" (click)="deletetext()"></span>
+         
+     </div>
+  </div>
+  {{dynamicpipe|json}}
+ <div class="form-group">
+    <input type="text" class="form-control" [(ngModel)]="end" id="End" value="End" name="end" #name="ngModel" placeholder="End" readonly="readonly">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+    </div>
+    
+    <div class="col-md-8 col-md-border container-fluid" *ngIf="displayimagepipe">
+    <div style="display: inline-flex;">
+  <div class="start"></div>
+  <div  *ngFor="let dp of dynamicpipe" class="pipedisplay">
+  <div class="childpile">
+  </div> 
+   <div (click)="plusreposition(e)" class="plusicon">
+  </div>
+  </div>
+  
+ 
+ <div class="end"></div>
+  </div>
+ 
+<!--   <div class="childpile">
+  </div> -->
+    </div>
+</div>  
+
+
+<footer class="footer navbar-fixed-bottom">
+     <div class="container footer-text">
+     <span>@copy right content</span>
+     </div>
+</footer>
