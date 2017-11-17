@@ -1,1 +1,67 @@
 
+/* You can add global styles to this file, and also import other style files */
+.right{
+	float:right;
+}
+.left{
+	floar:left;
+}
+.navbar-default{
+	background-color:#5bc0de !important;
+	}
+	
+footer{
+    width:100%;
+    min-height:50px;    
+    background-color: #5bc0de;
+}
+.footer-text{
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+}
+/* .start{
+	 width: 46px;
+    height: 44px;
+    background: url("../assets/images/newshapes.PNG") -91px 0;
+} */
+ 
+.start {
+    background-image: url("/assets/images/newshapes.PNG");
+	background-position: -63px -121px;
+	width: 64px;
+	height: 54px;
+}
+.pipedisplay {
+	background-image: url("/assets/images/newshapes.PNG");
+	background-position: -54px -85px;
+	width: 71px;
+	height:47px;
+	margin-top:2px;
+  }
+ .end {
+	background-image: url("/assets/images/newshapes.PNG");
+	background-position: -63px -202px;
+	width: 64px;
+	height: 54px;
+	margin-top:4px;
+  }
+  .plusicon {
+	background-image: url("/assets/images/newshapes.PNG");
+	background-position: -37px -157px;
+	width: 64px;
+	height: 54px;
+	position: absolute;
+    margin-left: -16px;
+    margin-top: 34px;
+  }
+
+  .childpile {
+	background: url("/assets/images/newshapes.PNG") no-repeat;
+	background-position: -39px -31px;
+	width: 130px;
+	height: 54px;
+	  margin-left: -16px;
+    margin-top: 34px;
+	
+  }
