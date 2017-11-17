@@ -1,1 +1,24 @@
 
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+
+
+import { AppComponent } from './app.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { MultipipeComponent } from './multipipe/multipipe.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    PipeComponent,
+    MultipipeComponent
+  ],
+  imports: [
+    BrowserModule,FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
