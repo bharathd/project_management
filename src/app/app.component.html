@@ -1,0 +1,106 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a> <img src="../assets/images/logo.png" height="80" width="100%" style="margin-top:10px"></a>
+      
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" (click)="displayTool()"><h3>Create Pipeline</h3></a></li>
+            </ul>
+  </div>
+</nav>
+<div class="row" *ngIf="createpipe">
+    <div class="col-md-3  col-md-border">
+            <form class="container-fluid" #formRef="ngForm" (ngSubmit)="createpipeview()">
+          <div class="form-group">
+            <input type="text" class="form-control" id="start" [(ngModel)]="start" value="start" name="start" #name="ngModel" placeholder="Start" readonly="readonly">
+          </div>
+          <div class="row">
+            <div *ngFor="let dp of dynamicpipe[0].pipes; let in=index" class="col-md-11 form-group">
+                 <input type="text" [(ngModel)]="dp.name" name="name{{in}}" class="form-control" #name="ngModel" required />
+             </div>
+             
+          </div>
+          <div  *ngIf="!dynamicon" class="col-md-1 form-group" style="margin-left: inherit;padding-top: 7px;">
+                 <span class="glyphicon glyphicon-plus" (click)="addtext()"></span>
+             </div>
+
+             <div  *ngIf="dynamiconm" class="col-md-1 form-group" style="margin-left: inherit;padding-top: 7px;">
+                 <span class="glyphicon glyphicon-minus" (click)="deletetext()"></span>
+             </div>
+         <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="end" id="End" value="End" name="end" #name="ngModel" placeholder="End" readonly="readonly">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+    
+    <div class="col-md-9 col-md-border container-fluid" *ngIf="displayimagepipe">
+    <div style="display: inline-flex;">
+  <div class = "holder1">
+    <span class="startlabel">start</span>
+    <div class="start">
+    </div>
+  </div>
+  <div  *ngFor="let dg of dynamicpipe[0].pipes;let in=index">
+  <span class="block"> {{dg.name}}</span>
+      <div class="pipedisplay">
+    <div class="childpile" *ngFor="let dchild of dg.child;let in=index"         [ngClass]="{'adjustpipe': in==1}" >
+     <span class="subtext">{{dchild.cname}}</span>
+      </div>
+
+
+      <div class="childpile" *ngIf="dg.child.length==0" [ngClass]="{'nochild': dg.child.length==0} " >
+     <span class="subtext">&nbsp;</span>
+      </div>
+
+      <div (click)="plusreposition(e)" class="plusicon" [ngClass] = "{'nochildaddpipe': dg.child.length==0}">
+      </div> 
+      </div>
+     <div class="pipegap"></div>
+
+  </div>
+  <div  *ngFor="let dp of dynamicpipe">
+  <hr>
+  </div>
+ 
+
+<div>
+ <span class="startlabel">End</span>
+  <div class="end">
+     
+  </div>
+
+  </div>
+  
+<!--   <div class="childpile">
+  </div> -->
+    </div>
+</div>  
+
+
+<footer class="footer navbar-fixed-bottom">
+     <div class="container footer-text">
+     <span>@ Hackathon 2017</span>
+     </div>
+</footer>
+<!-- 
+<form id="myform" class="form-wizard">
+    
+    <input type="submit"/>
+</form> -->
+<!-- 
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+ -->

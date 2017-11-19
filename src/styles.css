@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+.right{
+    float:right;
+}
+.left{
+    floar:left;
+}
+.navbar-default{
+    background-color:#5bc0de !important;
+    }
+    
+footer{
+    width:100%;
+    min-height:50px;    
+    background-color: #5bc0de;
+}
+.footer-text{
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+}
+/* .start{
+     width: 46px;
+    height: 44px;
+    background: url("../assets/images/newshapes.PNG") -91px 0;
+} */
+ .startlabel{
+     /*   top: 43px;
+    position: relative;*/
+    margin-left: 11px;
+ }
+.start {
+    background-image: url(/assets/images/newshapes.png);
+    background-position: -769px -663px;
+    width: 86px;
+    height: 38px;
+}
+.pipedisplay {
+    background-image: url(/assets/images/newshapes.png);
+    background-position: -732px -619px;
+    width: 125px;
+    height: 38px; 
+  }
+ .end {
+       background-image: url(/assets/images/newshapes.png);
+    background-position: -560px -777px;
+    width: 83px;
+    height: 38px; 
+  }
+  .plusicon {
+        background-image: url(/assets/images/newshapes.png);
+    background-position: -15px -163px;
+    width: 124px;
+    height: 73px;
+    /* position: absolute; */
+    /* margin-left: -16px; */
+    margin-top: -18px;
+  }
+  .childpile {
+           background: url(/assets/images/newshapes.png) no-repeat;
+    background-position: -11px 14px;
+    width: 127px;
+    height: 92px;
+    
+  }
+
+
+ /* .holder1{
+    float:left;
+  }*/
+  .line {
+       background-image: url(/assets/images/newshapes.png);
+    background-position: -731px -617px;
+    width: 126px;
+    height: 46px;
+    margin-top: 6px;
+   margin-left: -1px; 
+  }
+  .adjustpipe{
+    margin-top: -38px !important;
+  }
+  .pipegap{
+       margin-top: -21px;
+    margin-left: 123px;
+    padding-left: 32px;
+    /* border-bottom: black; */
+    /* padding-bottom: 102px; */
+    /* margin-right: 10px; */
+    width: 2px;
+    height: 4px;
+    background-color: black;
+    display: inline-block;
+        float: left;
+  }
+  .subtext{
+        left: 36px;
+    position: relative;
+    top: 36px;
+    font-size: 12px;
+  }
+  .endlabel{
+    margin-left: 44px;
+    font-weight: bold;
+  }
+
+  .nochild{
+    visibility:hidden;
+  }
+  .nochildaddpipe{
+    margin-top:-74px !important;
+  }
+  .block{
+    height: 21px;
+    display: block;
+  }
